@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TopOnTest'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A short description of TopOnTest.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+  试一下看看行不系啊,好幸福那么安排单点的点滴潘多拉到哪啦
                        DESC
 
   s.homepage         = 'https://github.com/GPPG/topon_pod_test.git'
