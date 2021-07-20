@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TopOnTest'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'A short description of TopOnTest.'
 
 # This description is used to generate tags and improve search results.
@@ -30,20 +30,35 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework/Headers/*.{h}'
+  #s.source_files = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework/Headers/*.{h}'
   
-  s.vendored_frameworks = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework'
+  #s.vendored_frameworks = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework'
   
   s.static_framework = true
+  
+  s.subspec 'AnyThinkSDKTT' do |ss|
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,Native}.framework'
+     ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
+  end
+  
+   s.subspec 'AnyThinkGDTAdapterTT' do |ss|
+     ss.dependency 'AnyThinkiOS/AnyThinkSDKTT'
+     ss.dependency 'GDTMobSDK', '4.12.81'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework'
+  end
+  
 
   # s.resource_bundles = {
   #   'TopOnTest' => ['TopOnTest/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-   s.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit'
+   #s.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit'
   #s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'AnyThinkiOS', '5.7.62'
-  s.dependency 'GDTMobSDK', '4.12.81'
+  
+ # s.dependency 'AnyThinkiOS', '5.7.62'
+ # s.dependency 'GDTMobSDK', '4.12.81'
 
 end

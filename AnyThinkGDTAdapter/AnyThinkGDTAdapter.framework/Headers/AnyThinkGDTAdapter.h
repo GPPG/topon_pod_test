@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import <GDTMobSDK/GDTSplashAd.h>
+#import "ATRewardedVideoManager.h"
+#import "ATAdManager.h"
+
 //! Project version number for AnyThinkGDTAdapter.
 FOUNDATION_EXPORT double AnyThinkGDTAdapterVersionNumber;
 
