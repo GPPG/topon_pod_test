@@ -15,7 +15,7 @@ extern NSString *const kATTrackerExtraSDKNotCalledReasonKey;
 extern NSString *const kATTrackerExtraLoadFailureReasonKey;
 extern NSString *const kATTrackerExtraASIDKey;
 extern NSString *const kATTrackerExtraStatusKey;
-extern NSString *const ATTrackerExtraShownNetworkPriorityInfoKey;
+extern NSString *const kATTrackerExtraShownNetworkPriorityInfoKey;
 extern NSString *const kATTrackerExtraHeaderBiddingInfoKey;
 extern NSString *const kATTrackerExtraResourceTypeKey;
 extern NSString *const kATTrackerExtraUnitIDKey;//Ad source id
@@ -44,6 +44,7 @@ extern NSString *const kATTrackerExtraUGUnitIDKey;
 extern NSString *const kATTrackerExtraASIDKey;
 extern NSString *const kATTrackerExtraFormatKey;
 extern NSString *const kATTrackerExtraRequestExpectedOfferNumberFlagKey;
+extern NSString *const kATTrackerExtraClickImpKey;
 
 // ofm
 extern NSString *const kATTrackerExtraOFMTrafficIDKey;

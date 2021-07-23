@@ -16,6 +16,7 @@ extern NSString *const kATSplashExtraRequestIDKey;
 @property(nonatomic, weak) id<ATSplashDelegate> delegate;
 @property(nonatomic, readonly) NSString *unitID;
 @property(nonatomic, assign) NSInteger priorityIndex;
+
 -(NSDictionary*)delegateExtra;
 -(void) trackShowWithoutWaterfall;
 -(void) trackClickWithoutWaterfall;
@@ -28,5 +29,14 @@ extern NSString *const kATSplashExtraRequestIDKey;
 -(void) trackSplashAdZoomOutViewClick;
 -(void) trackSplashAdZoomOutViewClosed;
 -(void) trackSplashAdDeeplinkOrJumpResult:(BOOL)success;
+
+// v5.7.53+
+-(void) trackSplashAdDetailClosed;
+-(void) trackSplashAdShowFailed:(NSError *)error;
+
+// v5.7.61+
+-(void) trackSplashAdCountdownTime:(NSInteger)countdown;
+
+- (void)startCountdown:(NSDictionary *)localInfo countdownBlock:(void(^)(NSInteger time))block;
 
 @end

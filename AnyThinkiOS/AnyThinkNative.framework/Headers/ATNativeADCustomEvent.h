@@ -19,6 +19,7 @@
 -(void) trackNativeAdLoaded:(NSDictionary*)assets;
 -(void) trackNativeAdLoadFailed:(NSError*)error;
 -(void) didAttachMediaView;
+-(void) invalidateUsedAdInfo;
 -(void) willDetachOffer:(ATNativeADCache*)offer fromAdView:(ATNativeADView*)adView;
 /**
  *@para refresh: whether the show is trigered by a ad refresh.
@@ -38,7 +39,7 @@
 - (BOOL)sendImpressionTrackingIfNeed;
 
 -(NSDictionary*)delegateExtra;
-- (NSDictionary *)delegateExtraWithNativeAD:(ATNativeADCache *)cache;
+- (NSMutableDictionary *)delegateExtraWithNativeAD:(ATNativeADCache *)cache;
 
 -(ATNativeADSourceType) sourceType;
 @property(nonatomic, copy) void(^requestCompletionBlock)(NSArray<NSDictionary*> *assets, NSError *error);

@@ -36,8 +36,8 @@ typedef NS_ENUM(NSInteger, ATRevenueToPlatform) {
     ATRevenueToPlatformAppsflyer = 2,
     ATRevenueToPlatformTenjin
 };
-extern NSString *const kPlacementModelCacheDateKey;
-extern NSString *const kPlacementModelCustomDataKey;
+extern NSString *const kATPlacementModelCacheDateKey;
+extern NSString *const kATPlacementModelCustomDataKey;
 @interface ATPlacementModelExtra:ATModel
 @property(nonatomic, readonly) BOOL cachesPlacementSetting;
 @property(nonatomic, readonly) NSTimeInterval defaultAdSourceLoadingDelay;
@@ -100,6 +100,7 @@ extern NSString *const kPlacementModelCustomDataKey;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTimeout;
 @property(nonatomic, readonly) NSTimeInterval headerBiddingRequestTolerateInterval;
 @property(nonatomic, readonly) NSString *S2SBidRequestAddress;
+@property(nonatomic, readonly) NSString *waterFallBidRequestAddress;
 
 @property(nonatomic, readonly) NSTimeInterval loadCapDuration;
 @property(nonatomic, readonly) NSInteger loadCap;
@@ -163,5 +164,9 @@ extern NSString *const kPlacementModelCustomDataKey;
 
 //todo: just for in-house list. It's not a good solution.
 @property(nonatomic, copy) NSArray<ATUnitGroupModel*>* waterfallA;
+
+// v5.7.56+
+@property(nonatomic, readonly) NSInteger encryptFlag;
+@property(nonatomic, readonly, copy) NSString *encryptPublicKey;
 
 @end
