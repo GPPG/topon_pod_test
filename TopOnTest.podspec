@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TopOnTest'
-  s.version          = '0.6.0'
+  s.version          = '0.7.0'
   s.summary          = '测试可不吗'
   s.description      = <<-DESC
   试一下看看行不系啊,好幸福那么安排单点的点滴潘多拉到哪啦么安排单点的点滴潘多么安排单点的点滴潘多么安排单点的点滴潘多
@@ -169,6 +169,14 @@ Pod::Spec.new do |s|
     ss.dependency 'TopOnTest/AnyThinkSDKTT'
     ss.vendored_frameworks = 'AnyThinkAdmobAdapter/AnyThinkAdmobAdapter.framework'
   end
+  
+    s.subspec 'AnyThinkFacebookAdapterTT' do |ss|
+    ss.dependency 'FBAudienceNetwork','6.5.1'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'TopOnTest/AnyThinkSDKTT'
+    ss.vendored_frameworks = 'AnyThinkFacebookAdapter/AnyThinkFacebookAdapter.framework','AnyThinkFacebookAdapter/FBBiddingKit.framework'
+  end
+  
   
 
 end
