@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/GPPG/topon_pod_test.git', :tag => s.version.to_s }
   
   s.ios.deployment_target = '9.0'
-  s.platform     = :ios, '9.0'
 
   s.static_framework = true
   
@@ -179,7 +178,7 @@ Pod::Spec.new do |s|
   
     s.subspec 'AnyThinkMopubAdapterTT' do |ss|
     ss.dependency 'mopub-ios-sdk','5.17.0'
-    ss.ios.deployment_target = '9.0'
+    ss.ios.deployment_target = '10.0'
     ss.dependency 'TopOnTest/AnyThinkSDKTT'
     ss.vendored_frameworks = 'AnyThinkMopubAdapter/AnyThinkMopubAdapter.framework'
   end
