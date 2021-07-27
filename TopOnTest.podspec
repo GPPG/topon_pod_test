@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TopOnTest'
-  s.version          = '0.7.0'
+  s.version          = '0.8.0'
   s.summary          = '测试可不吗'
   s.description      = <<-DESC
   试一下看看行不系啊,好幸福那么安排单点的点滴潘多拉到哪啦么安排单点的点滴潘多么安排单点的点滴潘多么安排单点的点滴潘多
@@ -34,18 +34,11 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
   
   s.default_subspecs = 'AnyThinkSDKTT'
-  
+
   s.subspec 'AnyThinkSDKTT' do |ss|
     ss.ios.deployment_target = '9.0'
-    ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,Native}.framework'
-    ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
-  end
-  
-  s.subspec 'AnyThinkGDTAdapterTT' do |ss|
-    ss.dependency 'GDTMobSDK','4.12.90'
-    ss.ios.deployment_target = '9.0'
-    ss.dependency 'TopOnTest/AnyThinkSDKTT'
-    ss.vendored_frameworks = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework'
+  ss.vendored_frameworks = 'AnyThinkiOS/AnyThink{Banner,Splash,SDK,RewardedVideo,Interstitial,Native}.framework'
+      ss.resource = 'AnyThinkiOS/AnyThinkSDK.bundle'
   end
   
     s.subspec 'AnyThinkApplovinAdapterTT' do |ss|
@@ -53,6 +46,13 @@ Pod::Spec.new do |s|
     ss.ios.deployment_target = '9.0'
     ss.dependency 'TopOnTest/AnyThinkSDKTT'
     ss.vendored_frameworks = 'AnyThinkApplovinAdapter/AnyThinkApplovinAdapter.framework'
+  end
+  
+    s.subspec 'AnyThinkGDTAdapterTT' do |ss|
+    ss.dependency 'GDTMobSDK','4.12.90'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'TopOnTest/AnyThinkSDKTT'
+    ss.vendored_frameworks = 'AnyThinkGDTAdapter/AnyThinkGDTAdapter.framework'
   end
   
     s.subspec 'AnyThinkUnityAdsAdapterTT' do |ss|
@@ -177,6 +177,11 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = 'AnyThinkFacebookAdapter/AnyThinkFacebookAdapter.framework','AnyThinkFacebookAdapter/FBBiddingKit.framework'
   end
   
-  
+    s.subspec 'AnyThinkMopubAdapterTT' do |ss|
+    ss.dependency 'mopub-ios-sdk','5.17.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'TopOnTest/AnyThinkSDKTT'
+    ss.vendored_frameworks = 'AnyThinkMopubAdapter/AnyThinkMopubAdapter.framework'
+  end
 
 end
