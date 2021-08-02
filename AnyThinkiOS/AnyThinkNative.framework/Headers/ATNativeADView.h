@@ -20,6 +20,13 @@ typedef NS_ENUM(NSInteger, ATNativeAdType) {
     ATNativeAdTypePaster = 2
 };
 
+typedef NS_ENUM(NSInteger, ATPlayerStatus) {
+    ATPlayerStatusStartPlay,
+    ATPlayerStatusPause,
+    ATPlayerStatusFinish,
+    ATPlayerStatusResume,
+    ATPlayerStatusAbort
+};
 /**
  * Subclasses are expected to call super when overriding willMoveToSuperview: because it it within this method the base class kick off the rendering process.
  */
@@ -100,6 +107,8 @@ typedef NS_ENUM(NSInteger, ATNativeAdType) {
  * The native ad render type
  */
 - (ATNativeAdRenderType)getCurrentNativeAdRenderType;
+
+- (void)recordCustomPlayerStatus:(ATPlayerStatus)status currentTime:(NSTimeInterval)time;
 
 @end
 

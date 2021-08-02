@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TopOnTest'
-  s.version          = '0.9.0'
+  s.version          = '1.0.0'
   s.summary          = '测试可不吗'
   s.description      = <<-DESC
   试一下看看行不系啊,好幸福那么安排单点的点滴潘多拉到哪啦么安排单点的点滴潘多么安排单点的点滴潘多么安排单点的点滴潘多
@@ -182,5 +182,23 @@ Pod::Spec.new do |s|
     ss.dependency 'TopOnTest/AnyThinkSDKTT'
     ss.vendored_frameworks = 'AnyThinkMopubAdapter/AnyThinkMopubAdapter.framework'
   end
-
+  
+    s.subspec 'AnyThinkKidozAdapterTT' do |ss|
+    ss.dependency 'AnyThinkPrivateSDK/Kidoz','0.4.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'TopOnTest/AnyThinkSDKTT'
+    ss.vendored_frameworks = 'AnyThinkKidozAdapter/AnyThinkKidozAdapter.framework'
+  end
+    s.subspec 'AnyThinkOguryAdapterTT' do |ss|
+    ss.dependency 'OguryAds','2.3.5'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'TopOnTest/AnyThinkSDKTT'
+    ss.vendored_frameworks = 'AnyThinkOguryAdapter/AnyThinkOguryAdapter.framework'
+  end
+    s.subspec 'AnyThinkVungleAdapterTT' do |ss|
+    ss.dependency 'AnyThinkPrivateSDK/Vungle','0.4.0'
+    ss.ios.deployment_target = '9.0'
+    ss.dependency 'TopOnTest/AnyThinkSDKTT'
+    ss.vendored_frameworks = 'AnyThinkVungleAdapter/AnyThinkVungleAdapter.framework'
+  end
 end

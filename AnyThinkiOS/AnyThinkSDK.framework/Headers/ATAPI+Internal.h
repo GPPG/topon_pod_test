@@ -23,7 +23,7 @@ extern NSString *const kATNativeADAssetsIconURLKey;
 extern NSString *const kATNativeADAssetsImageURLKey;
 extern NSString *const kATNativeADAssetsLogoURLKey;
 extern NSString *const kATNativeADAssetsSponsoredImageKey;
-
+extern NSString *const kATNativeADAssetsVideoUrlKey;
 extern NSString *const kATAdAssetsCustomObjectKey;
 
 extern NSString *const kATADLoadingStartLoadNotification;

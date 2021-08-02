@@ -19,6 +19,8 @@ extern NSString *const kATAdapterCustomInfoExtraKey;
 @class ATMyOfferOfferModel;
 @class ATBidInfo;
 @class ATWaterfall;
+@class ATInHouseBidRequest;
+
 @protocol ATAdAdapter<NSObject>
 @property (nonatomic,copy) void (^metaDataDidLoadedBlock)(void);
 /*
@@ -33,6 +35,7 @@ extern NSString *const kATAdapterCustomInfoExtraKey;
 +(void) bidRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel info:(NSDictionary*)info completion:(void(^)(ATBidInfo *bidInfo, NSError *error))completion;
 @optional
 +(NSDictionary*)headerBiddingParametersWithUnitGroupModel:(ATUnitGroupModel*)model extra:(NSDictionary *)extra;
++(ATInHouseBidRequest*)inHouseBiddingRequestWithPlacementModel:(ATPlacementModel*)placementModel unitGroupModel:(ATUnitGroupModel*)unitGroupModel extra:(NSDictionary *)extra;
 +(NSString*) adsourceRemoteKeyWithContent:(NSDictionary*)content unitGroupModel:(ATUnitGroupModel *)unitGroupModel;
 @end
 #endif /* ATAdAdapter_h */
