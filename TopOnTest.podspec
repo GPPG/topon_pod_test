@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = '测试可不吗'
   s.description      = <<-DESC
-  试一下看看行不系啊,好幸福那么安排单点的点滴潘多拉到哪啦么安排单点的点滴潘多么安排单点的点滴潘多么安排单点的点滴潘多
+  试一下看看行不啊,测试可不吗测试可不吗测试可不吗测试可不吗测试可不吗测试可不吗测试可不吗测试可不吗测试可不吗
                        DESC
   s.homepage         = 'https://github.com/GPPG/topon_pod_test.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -191,7 +191,7 @@ Pod::Spec.new do |s|
   end
     s.subspec 'AnyThinkOguryAdapterTT' do |ss|
     ss.dependency 'OguryAds','2.3.5'
-    ss.ios.deployment_target = '9.0'
+    ss.ios.deployment_target = '10.0'
     ss.dependency 'TopOnTest/AnyThinkSDKTT'
     ss.vendored_frameworks = 'AnyThinkOguryAdapter/AnyThinkOguryAdapter.framework'
   end
@@ -201,4 +201,5 @@ Pod::Spec.new do |s|
     ss.dependency 'TopOnTest/AnyThinkSDKTT'
     ss.vendored_frameworks = 'AnyThinkVungleAdapter/AnyThinkVungleAdapter.framework'
   end
+  
 end
